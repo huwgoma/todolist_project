@@ -3,7 +3,8 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
-require_relative 'todolist_project'
+require 'date'
+require_relative '../lib/todolist_project'
 
 class TodoListTest < Minitest::Test
   def setup
@@ -16,6 +17,16 @@ class TodoListTest < Minitest::Test
     @list.add(@todo1)
     @list.add(@todo2)
     @list.add(@todo3)
+  end
+
+  def test_nil_due_date
+    assert_nil(@todo1.due_date)
+  end
+
+  def test_due_date
+    due_date = Date.today + 3
+    @todo2.due_date = due_date
+    assert_equal(due_date, @todo2.due_date)
   end
 
   def test_to_a
