@@ -5,6 +5,7 @@ Minitest::Reporters.use!
 
 require 'date'
 require_relative '../lib/todolist_project'
+# require 'todolist_project'
 
 class TodoListTest < Minitest::Test
   def setup
