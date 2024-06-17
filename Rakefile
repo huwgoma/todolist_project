@@ -1,5 +1,6 @@
-require 'rake/testtask'
 require 'bundler/gem_tasks'
+require 'rake/testtask'
+
 require 'find'
 
 desc 'Run tests'

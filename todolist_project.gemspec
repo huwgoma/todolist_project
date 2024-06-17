@@ -8,3 +8,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://example.com/todolist_project'
   s.files       = ['lib/todolist_project.rb', 'test/todolist_project_test.rb']
 end
+
+# Does the .gemspec file automatically add lib/ to $LOAD_PATH?
